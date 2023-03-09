@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 import { program } from 'commander';
 import fs from 'fs-extra'
 import path from 'path'
@@ -11,10 +10,10 @@ const __dirnameNew = path.dirname(__filenameNew)
 const rootPath = __dirnameNew.slice(0, __dirnameNew.length - 4)
 // 获取package.json文件内容
 const packageJsonData = JSON.parse(fs.readFileSync(rootPath + '/package.json', 'utf8'))
+
 program
     .command('commit <commitDesc>')
     .action((commitDesc) => {
-        //处理CI逻辑
         handleMiniprogramCi(commitDesc)
     })
 //读取版本
