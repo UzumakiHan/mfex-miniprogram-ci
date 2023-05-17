@@ -1,11 +1,11 @@
-# 微信小程序CI构建
+# 微信小程序CI构建工具
 
 ## 全局安装
-```
+```bash
 npm install -g mfex-miniprogram-ci
 ```
 ## CI构建
-```
+```bash
 mfex-miniprogram-ci commit <版本描述>
 ```
 ## 详细查看 
